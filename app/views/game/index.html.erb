@@ -1,2 +1,115 @@
-<h1>Game#index</h1>
-<p>Find me in app/views/game/index.html.erb</p>
+<div class="container" ng-app="connect4">
+
+	<div id="main" ng-controller="GameController as game">
+
+
+
+		<b><label id="message"></label></b>
+
+		<div id="menu">
+
+			<div class="button-type bg-blue" id="spButton" ng-click="start(1)">
+
+				<h1 class="center-label" autofocus>Single Player</h1>
+
+			</div>
+
+			<div class="button-type bg-blue" id="mpButton" ng-click="start(2)">
+
+				<h1 class="center-label" >Multiplayer</h1>
+
+			</div>
+
+
+
+			<div id="rules">
+
+				<div class="comboLabel" >
+
+					<div id="column">
+
+						<label id="columnLabel" class="gray">Columns</label>
+
+						<select id="columnSelect" ng-model="rules.columns" ng-options="x as x for x in rules.columnArray" ng-disabled="!checked">
+
+						</select>
+
+					</div>
+
+					<div id="row">
+
+						<label id="rowsLabel"  class="gray">Rows</label>
+
+						<select id="rowSelect" ng-model="rules.rows" ng-options="x as x for x in rules.rowArray" ng-disabled="!checked">
+
+						</select>
+
+					</div>
+
+					<div id="connect">
+
+						<label id="connectLabel"  class="gray">Connect</label>
+
+						<select id="connectSelect" ng-model="rules.connect" ng-options="x as x for x in rules.connectArray" ng-disabled="!checked">
+
+						</select>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+
+
+			<div id="defaultCheck">
+
+				<label id="defaultRLabel">
+
+					<input type="checkbox" ng-model="checked" />Custom
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div id="game-view" class="hide">
+
+
+
+			<table ng-repeat=" t in game.table">
+
+				<thead>
+
+					<tr>
+
+						<th class="game-node-header" ng-repeat=" head in game.columns" id="{{'game-node-header'+head}}" ng-click="dropToken('game-node-header'+head)">
+
+						</th>
+
+					</tr>
+
+				</thead>
+
+				<tr ng-repeat=" x in game.rows">
+
+					<td ng-repeat="y in game.columns">
+
+						<span id="{{'game-node'+x+''+y}}"  class="bg-white" >O</span>
+
+					</td>
+
+				</tr>
+
+			</table>
+
+		</div>
+
+	</div>
+
+
+
+</div>

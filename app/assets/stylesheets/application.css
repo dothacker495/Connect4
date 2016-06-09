@@ -13,3 +13,237 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+.view-animate-container {
+
+  position:relative;
+
+  height:500px!important;
+
+  background:white;
+
+  border:1px solid black;
+
+  height:40px;
+
+  overflow:hidden;
+
+}
+
+
+
+.view-animate {
+
+  padding:10px;
+
+}
+
+
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+
+
+
+  display:block;
+
+  width:100%;
+
+  border-left:1px solid black;
+
+
+
+  position:absolute;
+
+  top:0;
+
+  left:0;
+
+  right:0;
+
+  bottom:0;
+
+  padding:10px;
+
+}
+
+
+
+.view-animate.ng-enter {
+
+  left:100%;
+
+}
+
+.view-animate.ng-enter.ng-enter-active {
+
+  left:0;
+
+}
+
+.view-animate.ng-leave.ng-leave-active {
+
+  left:-100%;
+
+}
+
+
+
+.button-type {
+  margin: 10px auto;
+  height: 150px;
+  width: 600px;
+  position: relative;
+  float: none;
+}
+
+
+
+.bg-blue{
+
+  background-color: #5D81FF;
+
+}
+
+
+
+.hide{
+
+  display:none;
+
+}
+
+.unhide{
+
+  display:block;
+
+}
+
+
+
+table, th , td {
+
+      border: 1px solid grey;
+
+      padding: 5px;
+
+}
+
+
+
+td, th{
+
+	height: 50px;
+
+	width: 50px;
+
+}
+
+.game-node {
+
+	height: 100%;
+
+	width: 100%;
+
+}   
+
+.game-node-header{
+
+	background:green;
+
+}
+
+
+
+.container{
+
+	height:500px!important;
+
+	width: 100%
+
+	background:white;
+
+	border:1px solid black;
+
+}
+
+
+
+.bg-red{
+
+	background-color: red;
+
+}
+
+
+
+.bg-purple{
+
+	background-color: purple;
+
+}
+
+
+
+
+
+.bg-green{
+
+	background-color: green;
+
+}
+
+
+
+.bg-white{
+
+	background-color: white;
+
+}
+
+
+
+.msg-red{
+
+	color: red;
+
+}
+
+
+
+.msg-white{
+
+	color: white;
+
+}
+
+
+
+.msg-black{
+
+	color: black;
+
+}
+
+
+
+.center-label{
+	color: white;
+	position: relative;
+	margin: 0px 30px auto;
+	/* position: relative; */
+	/* text-align: center; */
+	font-size: 100px;
+	/* height: 100%; */
+	/* width: 100%; */
+	/* margin-bottom: 0px; */
+	/* margin-top: 100px; */
+	top: 15px;
+	font-family: monospace;
+}
+
+
+
+   
