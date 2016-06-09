@@ -64,18 +64,23 @@ $scope.start = function(value){
   var columns = $scope.rules.columns;
   var rows = $scope.rules.rows;
   var connect = $scope.rules.connect;
-  document.getElementById('menu').className="hide";
-  document.getElementById('game-view').className="unhide";
-  $scope.initializeGameTable();
-  $scope.game.table = [1];
-  $scope.pushData($scope.game.columns,$scope.rules.columns);//For UI Iteration purpose
-  $scope.pushData($scope.game.rows,$scope.rules.rows);//For UI Iteration purpose
-  $scope.game.connect = $scope.rules.connect;//For UI purpose
-  $scope.game.gameType = value; //Singleplayer or Multiplayer TBC
-  initializeGameTable(columns,rows,connect); //Initialize Game Table Data
-  initializeLevelTracker(columns);
-  initializeTurnCounter();
-  startGame();
+ console.log(value);
+  if(parseInt(value)==2){
+    document.getElementById('menu').className="hide";
+    document.getElementById('game-view').className="unhide";
+    $scope.initializeGameTable();
+    $scope.game.table = [1];
+    $scope.pushData($scope.game.columns,$scope.rules.columns);//For UI Iteration purpose
+    $scope.pushData($scope.game.rows,$scope.rules.rows);//For UI Iteration purpose
+    $scope.game.connect = $scope.rules.connect;//For UI purpose
+    $scope.game.gameType = value; //Singleplayer or Multiplayer TBC
+    initializeGameTable(columns,rows,connect); //Initialize Game Table Data
+    initializeLevelTracker(columns);
+    initializeTurnCounter();
+    startGame();
+  }else{
+    alert("Sorry NO AI [YET], Testing and recoding the formulated AI algorithm took forever(a day)");  
+  }
 };
 
 $scope.dropToken = function(id){
