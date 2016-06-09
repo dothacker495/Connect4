@@ -21,7 +21,7 @@ var connectMax = 0;
 var columnMax,rowMax;
 var turn = 0; //0 - Player1 Turn  1 - Player2 Turn
 var turnCounter = 0;
-app.controller("GameController",function($scope){
+function GameController1($scope){
 
     $scope.rules = {
 columns : 7,
@@ -520,6 +520,8 @@ function setMessage(str,color){
 function startGame(){
   setMessage(getTurnMessage(),0);
 }
-});
+}
+GameController1.$inject = ["$scope"];
+app.controller("GameController",GameController1);
 
 
