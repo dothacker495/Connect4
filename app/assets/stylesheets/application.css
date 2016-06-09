@@ -15,82 +15,6 @@
  */
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
-.view-animate-container {
-
-  position:relative;
-
-  height:500px!important;
-
-  background:white;
-
-  border:1px solid black;
-
-  height:40px;
-
-  overflow:hidden;
-
-}
-
-
-
-.view-animate {
-
-  padding:10px;
-
-}
-
-
-
-.view-animate.ng-enter, .view-animate.ng-leave {
-
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-
-
-
-  display:block;
-
-  width:100%;
-
-  border-left:1px solid black;
-
-
-
-  position:absolute;
-
-  top:0;
-
-  left:0;
-
-  right:0;
-
-  bottom:0;
-
-  padding:10px;
-
-}
-
-
-
-.view-animate.ng-enter {
-
-  left:100%;
-
-}
-
-.view-animate.ng-enter.ng-enter-active {
-
-  left:0;
-
-}
-
-.view-animate.ng-leave.ng-leave-active {
-
-  left:-100%;
-
-}
-
-
-
 .button-type {
   margin: 10px auto;
   height: 150px;
@@ -99,151 +23,146 @@
   float: none;
 }
 
-
-
 .bg-blue{
-
-  background-color: #5D81FF;
-
+  background-color: #blue;
 }
-
-
 
 .hide{
-
   display:none;
-
 }
-
 .unhide{
-
   display:block;
-
 }
 
-
-
-table, th , td {
-
-      border: 1px solid grey;
-
-      padding: 5px;
-
+table, td, th {
+	  border-collapse:collapse;
+      border: 15px solid #49AAE8;
 }
-
-
 
 td, th{
-
 	height: 50px;
-
 	width: 50px;
-
 }
 
+th{
+  width: 0; 
+  height: 0; 
+  
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #49AAE8;
+}
+
+span{
+	font-size:50px;
+	height:100%;
+	width:100%;
+}
 .game-node {
-
 	height: 100%;
-
 	width: 100%;
-
 }   
-
 .game-node-header{
-
-	background:green;
-
 }
-
-
 
 .container{
-
-	height:500px!important;
-
-	width: 100%
-
-	background:white;
-
+	height:600px!important;
+	width: 100%;
+	background:#8A76E8;
 	border:1px solid black;
-
 }
-
-
 
 .bg-red{
-
 	background-color: red;
-
 }
-
-
 
 .bg-purple{
-
 	background-color: purple;
-
 }
-
-
-
 
 
 .bg-green{
-
 	background-color: green;
-
 }
-
-
 
 .bg-white{
-
 	background-color: white;
-
+	
 }
-
-
 
 .msg-red{
-
 	color: red;
-
 }
-
-
 
 .msg-white{
-
 	color: white;
-
 }
-
-
 
 .msg-black{
-
 	color: black;
-
 }
 
+.msg-purple{
+	color: purple;
+}
 
+.msg-green{
+	color: green;
+}
 
 .center-label{
 	color: white;
 	position: relative;
 	margin: 0px 30px auto;
-	/* position: relative; */
-	/* text-align: center; */
-	font-size: 100px;
-	/* height: 100%; */
-	/* width: 100%; */
-	/* margin-bottom: 0px; */
-	/* margin-top: 100px; */
 	top: 15px;
+	font-size: 70px;
 	font-family: monospace;
 }
 
+#rules{
+	/* position: relative; */
+	/* margin: 0 auto; */
+	/* width: 500px; */
+	margin: 30px auto;
+	width: 300px;
+	border: 3px solid #49AAE8;
+	padding: 10px;
+	background-color: #49AAE8;
+	color: white;
+}
 
+#rules label{
+	font-size: 20px;
+	font-family: monospace;
+}
+#rules select{
+	width: 50px;
+	float: right;
+}
 
-   
+#message{
+	font-size: 20px;
+	font-family: monospace;
+	font-weight: bold;
+	margin: 0 auto;
+	width: 300px;
+	
+}
+
+#defaultCheck{
+	float:right;
+	width:100px;
+	color:white;
+}
+
+#mpButton, #spButton{
+	background-color:#49AAE8;
+}
+
+#mpButton:hover, #spButton:hover{
+	background-color:#7BFFFF;
+}
+
+table{
+	margin: auto;
+}

@@ -10,7 +10,7 @@
 
 			<div class="button-type bg-blue" id="spButton" ng-click="start(1)">
 
-				<h1 class="center-label" autofocus>Single Player</h1>
+				<h1 class="center-label" autofocus>Singleplayer</h1>
 
 			</div>
 
@@ -96,9 +96,9 @@
 
 				<tr ng-repeat=" x in game.rows">
 
-					<td ng-repeat="y in game.columns">
+					<td ng-repeat="y in game.columns" ng-click="dropToken('game-node-header'+y)">
 
-						<span id="{{'game-node'+x+''+y}}"  class="bg-white" >O</span>
+						<span id="{{'game-node'+x+''+y}}"  class="bg-white msg-white" disabled>O</span>
 
 					</td>
 
